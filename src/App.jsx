@@ -1,18 +1,17 @@
-import React, {useState} from 'react'
-// import Wellcome from './childe'
-// import src from './assets/song.jpg'
+import React from 'react'
+import Wellcome from './childe'
+import Maplist from './mapMethod/index'
+import Apipatch from './API'
+import User from './UseEffect'
+
 
 function App() {
-  const [show,setShow] = useState(true)
   return (
     <div>
-      {/* <Wellcome name="ibrahim afridi" age={21} address="345 arfa tower" src={src} />
-   <image  src={src}> */}
-   <div>
-      <button onClick={() => setShow(!show)}>Toggle</button>
-      {show && <p>Hello Ibrahim!</p>}
-    </div>
-  
+      <Maplist />
+      {/* <Wellcome /> */}
+      <Apipatch />
+      <User />
     </div>
   )
 }
