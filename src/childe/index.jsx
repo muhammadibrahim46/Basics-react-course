@@ -7,6 +7,7 @@ function Wellcome() {
   const [show, setShow] = useState(true)
   const [input, setInput] = useState("")
   const [white, setWhite] = useState(false)
+  const [color, setColor] =useState('lightgray')
 
   return (
     <>
@@ -26,6 +27,13 @@ function Wellcome() {
 
       <div className='text-2xl text-center'>
         <h1>{count}</h1>
+        <div style={{backgroundColor:''+color}}>
+          <button onClick={()=>setColor('blue')}>blue</button>
+          <button onClick={()=>setColor('red')}>red</button>
+          <button onClick={()=>setColor('green')}>green</button>
+          <button onClick={()=>setColor('yellow')}>yallow</button>
+        </div>
+        
         <button onClick={() => setCount(count + 1)}>Increase</button>
         <button onClick={() => setCount(count - 1)}>Decrease</button>
       </div>
